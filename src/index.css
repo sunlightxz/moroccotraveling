@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600&family=Forum&family=Poppins:wght@100;300;400;500&display=swap');
+
+html ,
+body ,
+#root ,
+.app {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.scroll {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    transform: rotate(-0.25turn);
+    position: relative;
+    transform: rotate(-90deg) translate(100%);
+
+}
+
+.scroll::after {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    background-color: #ffff;
+    height: 1px;
+    left: 87px;
+    top: 13px;
+    animation: scrollDown 3s ease-in-out infinite;
+
+}
+
+@keyframes scrollDown {
+
+    0% {
+  
+      width: 0;
+  
+    }
+  
+    100% {
+  
+      width: 100%;
+  
+    }
+  
+  }
+.text {
+  
+}
