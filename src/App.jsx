@@ -4,6 +4,7 @@ import './App.css'
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Tours from './components/Tours'
+import About from './components/About'
 import Sust from './components/Sust'
 import Map from './components/Map'
 import Footer from './components/Footer'
@@ -31,6 +32,7 @@ function App() {
           isTopOfPage= {isTopOfPage}   
         />
         <Hero/>
+        <Tours/>
         <Map/>
         <Sust/>
         <Experience/>

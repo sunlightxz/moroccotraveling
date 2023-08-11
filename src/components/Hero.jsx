@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import bgvideo from '../assets/bgvideo1.mp4';
-import Tours from './Tours';
+import About from './About';
 
 const Hero = () => {
   const [scrollPosition, setScrollPosition] = React.useState(0);
@@ -44,8 +44,8 @@ const Hero = () => {
 
         <div className='h-full mx-auto w-11/12  flex '>
           <div className='flex justify-between w-full items-end pb-20'>
-            <animated.h1 style={{ ...parallaxProps, ...opacityProps }} className='text-8xl text tracking-wide font-forum z-10 '>
-              DO IT <br /> <span className=''>THE <br /> MOROCCAN</span> <br /> WAY.
+            <animated.h1 style={{ ...parallaxProps, ...opacityProps }} className='text-8xl text text-white tracking-wide font-forum z-10 '>
+              DO IT <br /> <span className='text-main'>THE <br /> MOROCCAN</span> <br /> WAY.
             </animated.h1>
             <div className='z-10 '>
               <span className='text-white scroll font-forum'>scroll down</span>
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
       </div>
       <div ref={toursRef} className='tours-section'>
-        <Tours />
+        <About />
       </div>
     </div>
   );

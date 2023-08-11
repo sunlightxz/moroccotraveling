@@ -52,3 +52,33 @@ body ,
 .text {
   
 }
+
+
+.main-title .title {
+
+}
+
+.main-title .alt {
+  color: white;
+  overflow: hidden;
+  clip: rect(auto, auto, auto, auto)
+}
+
+.main-title .alt h1 {
+  color: white;
+}
+.main-title h1 {
+  color: white;
+}
+
+
+
+.swiper-pagination .swiper-pagination-fraction .swiper-pagination-horizontal {
+  position: absolute;
+  top: 50%;
+  left: -548px;
+}
+
+.swiper-pagination-current {
+  
+}

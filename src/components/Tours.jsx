@@ -1,33 +1,53 @@
 import React from 'react';
-import { useSpring, animated } from 'react-spring';
-import hero from '../assets/hero.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import slide1 from '../assets/slide1.png';
+import slide2 from '../assets/slide2.png';
+import slide3 from '../assets/slide3.png';
+import { Pagination } from 'swiper/modules';
+
 
 const Tours = () => {
   const toursRef = React.useRef();
   return (
-    <div className='h-full mx-auto w-11/12  flex py-6'  ref={toursRef}>
-      <div className="flex justify-between items-center">
-        <div className="">
-          
-          <p>Morocco, a captivating North African gem, blends ancient 
-              traditions with modern allure. Its diverse landscapes span
-              from the majestic Atlas Mountains to the golden Sahara 
-              Desert, attracting adventurous souls. Bustling souks offer a 
-              kaleidoscope of colors,scents, and handicrafts, while historic
-              cities like Marrakech and Fez boast breathtaking architecture. 
-              Experience the warm hospitality,and immerse yourself in the 
-              rhythmic beats of Moroccan music.
-            </p>
-            <p>
-            Whether wandering through blue-hued Chefchaouen 
-            or surfing the Atlantic waves in Essaouira, Morocco leaves an
-            indelible mark on every traveler's heart.       
-            </p>
+    <div className='h-full w-full py-6'ref={toursRef}>
+        <div className="flex justify-center items-center mx-auto">
+            <h1 className='font-forum text-[70px] mb-4'>Tours</h1>
         </div>
-        <img src={hero} alt="" />
-      </div>
-      <div className="text-target" />
+        <div className="flex h-full justify-between gap-24 ">
+          <div className="items-center my-auto mr-10">
+            <p className='text-[24px]'><span className='text-[92px]'>1</span>/3</p>
+          </div>
+          <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+            type: 'fraction',
 
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={slide1} alt="" />  
+          </SwiperSlide>  
+          <SwiperSlide>
+            <img src={slide2} alt="" />  
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slide3} alt="" />  
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slide1} alt="" />  
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slide2} alt="" />  
+          </SwiperSlide>  
+        </Swiper>
+        </div>
     </div>
   )
 }

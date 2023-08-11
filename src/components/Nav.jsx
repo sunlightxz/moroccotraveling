@@ -11,7 +11,7 @@ const Nav = ({isTopOfPage}) => {
     const navbarBg = isTopOfPage ? "text-white" : "bg-white text-black";
     const [menuToglled,setMenuToglled] = useState(false)
   return (
-    <div className={`${navbarBg}  py-6 flex justify-between items-center fixed top-0 z-30 w-full`}>
+    <div className={`${navbarBg}  py-6 flex justify-between items-center fixed top-0 z-30 w-full transition bottom-0.3s ease-in-out box-shadow-0.3s ease-in-out`}>
         <div className="mx-auto w-5/6 flex justify-between items-center gap-16">
            {isTopOfPage ?
              <img src={logo} alt="logo" />
